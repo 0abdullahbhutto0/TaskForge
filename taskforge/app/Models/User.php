@@ -87,4 +87,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(TaskComment::class);
     }
+
+    public function hasRole()
+    {
+        return $this->roles->first()->name;
+    }
 }
